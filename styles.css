@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fcfcfc;
+    margin: 0px;
+    font-family: Helvetica;
+    font-size: 16px;
+}
+input {
+    width: 100%;
+}
+input[type="checkbox"] {
+    width: auto;
+}
+.sheet-border {
+    border: 2px solid #000;
+}
+
+.sheet-top-row {
+    display: flex;
+}
+.sheet-container {
+    max-width: 1276px;
+    background-color: #ccc;
+    margin: auto;
+    padding: 24px;
+}
+.sheet-player-name {
+    flex: 1 0 50%;
+}
+.sheet-character-name {
+    flex: 1 0 50%;
+    margin-left: 8px;
+}
+.sheet-name-container {
+    display: flex;
+    margin: 24px 8px;
+}
+.sheet-name-label {
+    flex-grow: 0;
+    transform: rotate(-90deg);
+}
+.sheet-name-input {
+    flex-grow: 1;
+}
+.sheet-container-container {
+    display: flex;
+}
+.sheet-character-row {
+    display: flex;
+}
+.sheet-middle-row {
+    display: flex;
+}
+
+.sheet-trait-block {
+    border: 2px solid #000;
+    position: relative;
+}
+
+.sheet-left.sheet-trait-block::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fff;
+}
+
+.sheet-right.sheet-trait-block::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 15px solid #fff;
+}
+
+.sheet-trait-block-corner-left {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+.sheet-trait-block-corner-right {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+}
+
+.sheet-trait-block-label {
+    background-color: #000;
+    color: #fff;
+    padding: 16px 16px 16px 40px;
+}
+
+.sheet-trait-block-textarea {
+    resize: vertical;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: -5px;
+}
+
+.sheet-hexagon {
+    position: relative;
+    width: 30px;
+    height: 17.32px;
+    margin: 8.66px 0;
+    border-left: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+}
+.sheet-hexagon--background {
+    background-image: url(http://csshexagon.com/img/meow.jpg);
+    background-size: auto 30.0222px;
+    background-position: center;
+}
+
+.sheet-hexTop,
+.sheet-hexBottom {
+    position: absolute;
+    z-index: 1;
+    width: 21.21px;
+    height: 21.21px;
+    overflow: hidden;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background: inherit;
+    left: 2.39px;
+}
+
+/*counter transform the bg image on the caps*/
+.sheet-hexTop:after,
+.sheet-hexBottom:after {
+    content: "";
+    position: absolute;
+    width: 26.0000px;
+    height: 15.011106998930272px;
+    -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-7.5056px);
+    -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-7.5056px);
+    transform:          rotate(45deg) scaleY(1.7321) translateY(-7.5056px);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: inherit;
+}
+
+.sheet-hexTop {
+    top: -10.6066px;
+    border-top: solid 2.8284px #ffffff;
+    border-right: solid 2.8284px #ffffff;
+}
+
+.sheet-hexTop:after {
+    background-position: center top;
+}
+
+.sheet-hexBottom {
+    bottom: -10.6066px;
+    border-bottom: solid 2.8284px #ffffff;
+    border-left: solid 2.8284px #ffffff;
+}
+
+.sheet-hexBottom:after {
+    background-position: center bottom;
+}
+
+.sheet-hexagon:after {
+    content: "";
+    position: absolute;
+    top: 1.1547px;
+    left: 0;
+    width: 26.0000px;
+    height: 15.0111px;
+    z-index: 2;
+    background: inherit;
+}
