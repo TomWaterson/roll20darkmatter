@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Matter Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-row">
+            <div class="player-name border">
+                <div class="name-container">
+                    <div class="name-label">Name</div>
+                    <div class="name-input"><input type="text" name="attr_character_name" placeholder="Character Name" /></div>
+                </div>
+            </div>
+            <div class="character-name border">
+                <div class="character-row">
+                    <div style="flex-grow: 2; margin: 0px 8px;"><input style="text-align: center" type="text" name="attr_class_and_level" placeholder="Class and Level" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_player_name" placeholder="player name" /></div>
+                </div>
+                <div class="character-row">
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_race" placeholder="race" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_background" placeholder="background" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_alignment" placeholder="alignment" /></div>
+                </div>
+                <div class="character-row">
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_xp" placeholder="xp" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_size" placeholder="size" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_gender" placeholder="gender" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_age" placeholder="age" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_height" placeholder="height" /></div>
+                    <div style="flex-grow: 1; margin: 0px 8px"><input style="text-align: center" type="text" name="attr_weight" placeholder="weight" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-row">
+            <div style="flex-grow: 1">
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Personality Traits</div>
+                    <div><textarea name="attr_personality_traits" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Ideals</div>
+                    <div><textarea name="attr_ideals" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Bonds</div>
+                    <div><textarea name="attr_bonds" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Flaws</div>
+                    <div><textarea name="attr_flaws" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Allies/Enemies</div>
+                    <div><textarea name="attr_allies_and_enemies" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="left trait-block">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Inventory</div>
+                    <div><textarea name="attr_inventory" class="trait-block-textarea"></textarea></div>
+                </div>
+            </div>
+            <div style="flex-grow: 2">
+                <div style="display: flex">
+                    <input style="width: 150px" type="text" name="attr_inspiration" /><div style="border: 5px solid #ccc">Inspiration</div>
+                </div>
+                <div style="display: flex">
+                    <div>AC</div>
+                    <div><input name="attr_ac" type="text" /></div>
+                    <div>ALT AC</div>
+                    <div><input name="attr_ac_alt" type="text" /></div>
+                    <div style="font-size: 0.5rem; text-align: center">
+                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
+                            <div>Inititive</div>
+                            <div><input name="attr_inititive" type="text" /></div>
+                        </div>
+                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
+                            <div>Speed</div>
+                            <div><input name="attr_speed" type="text" /></div>
+                        </div>
+                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
+                            <div>Temp.HP</div>
+                            <div><input name="attr_temp_hp" type="text" /></div>
+                        </div>
+                    </div>
+                    <div>HP (HEART) | MAX HP (BOX) | Hit Dice (BOX)</div>
+                </div>
+                <div style="display: flex">
+                    <div style="flex: 1 0 25%">
+                        <div>Resistances</div>
+                        <div><textarea name="attr_resistances"></textarea></div>
+                    </div>
+                    <div style="flex: 1 0 25%">
+                        <div>Deaths</div>
+                        <div><textarea name="attr_deaths"></textarea></div>
+                    </div>
+                    <div style="flex: 1 0 50%;">
+                        <div style="border: 5px solid #ccc">Proficiency Bonus</div>
+                        <input style="width: 150px" type="text" name="attr_proficiency_bonus" />
+                    </div>
+                </div>
+                <div>
+                    <div>Stats</div>
+                    <div>STRENGTH: <input style="width: 150px" type="text" name="attr_strength" /></div>
+                    <div>STRENGTH MOD: <input style="width: 150px" value="0" type="text" name="attr_strength_mod" /></div>
+                    <div>CHARISMA: <input style="width: 150px" type="text" name="attr_charisma" /></div>
+                    <div>CHARISMA MOD: <input style="width: 150px" value="0" type="text" name="attr_charisma_mod" /></div>
+                    <div>WISDOM: <input style="width: 150px" type="text" name="attr_wisdom" /></div>
+                    <div>WISDOM MOD: <input style="width: 150px" type="text" name="attr_wisdom_mod" /></div>
+                    <div>INTELLIGANCE: <input style="width: 150px" type="text" name="attr_intelligance" /></div>
+                    <div>INTELLIGANCE MOD: <input style="width: 150px" type="text" name="attr_intelligance_mod" /></div>
+                    <div>CONSTITUTION: <input style="width: 150px" type="text" name="attr_constitution" /></div>
+                    <div>CONSTITUTION MOD: <input style="width: 150px" type="text" name="attr_constitution_mod" /></div>
+                    <div>DEXTERITY: <input style="width: 150px" type="text" name="attr_dexterity" /></div>
+                    <div>DEXTERITY MOD: <input style="width: 150px" type="text" name="attr_dexterity_mod" /></div>
+                    <div>----Saving Throws----</div>
+                    <div>Dexterity Saving Throws: <input style="width: 150px" type="text" name="attr_dexterity_saving_Throws" /></div>
+                    <div>Wisdom saving throws: <input style="width: 150px" type="text" name="attr_wisdom_saving_throws" /></div>
+                    <div>Constitution saving throws: <input style="width: 150px" type="text" name="attr_constitution_saving_throws" /></div>
+                    <div>Intelligence saving throws: <input style="width: 150px" type="text" name="attr_intelligence_saving_throws" /></div>
+                    <div>-----</div>
+                    <div>Passive Perception: = 10 + wisdom + profficiency bonus
+                        <input style="width: 150px" type="text" name="attr_passive_perception" />
+                    </div>
+                    <div>-----</div>
+                    <div>Athletics: 
+                        <input style="width: 150px" type="text" name="attr_athletics" />
+                        <input type="checkbox" name="attr_athletics_prof" />
+                    </div>
+                    <div>Acrobatics: 
+                        <input style="width: 150px" type="text" name="attr_acrobatics" />
+                        <input type="checkbox" name="attr_acrobatics_prof" />
+                    </div>
+                    <div>Piloting: 
+                        <input style="width: 150px" type="text" name="attr_piloting" />
+                        <input type="checkbox" name="attr_piloting_prof" />
+                    </div>
+                    <div>Sleight of hand: 
+                        <input style="width: 150px" type="text" name="attr_sleight_of_hand" />
+                        <input type="checkbox" name="attr_sleight_of_hand_prof" />
+                    </div>
+                    <div>Stealth: 
+                        <input style="width: 150px" type="text" name="attr_stealth" />
+                        <input type="checkbox" name="attr_stealth_prof" />
+                    </div>
+                    <div>-----</div>
+                    <div>Arcana: 
+                        <input style="width: 150px" type="text" name="attr_arcana" />
+                        <input type="checkbox" name="attr_arcana_prof" />
+                    </div>
+                    <div>Data: 
+                        <input style="width: 150px" type="text" name="attr_data" />
+                        <input type="checkbox" name="attr_data_prof" />
+                    </div>
+                    <div>History: 
+                        <input style="width: 150px" type="text" name="attr_history" /></div>
+                    <div>Investigation: <input style="width: 150px" type="text" name="attr_investigation" />
+                        <input type="checkbox" name="attr_history_prof" />
+                    </div>
+                    <div>Nature: 
+                        <input style="width: 150px" type="text" name="attr_nature" />
+                        <input type="checkbox" name="attr_nature_prof" />
+                    </div>
+                    <div>Religion: 
+                        <input style="width: 150px" type="text" name="attr_religion" />
+                        <input type="checkbox" name="attr_religion_prof" />
+                    </div>
+                    <div>Technology: 
+                        <input style="width: 150px" type="text" name="attr_technology" />
+                        <input type="checkbox" name="attr_technology_prof" />
+                    </div>
+                    <div>-----</div>
+                    <div>Animal Handling: 
+                        <input style="width: 150px" type="text" name="attr_animal_handling" />
+                        <input type="checkbox" name="attr_animal_handling_prof" />
+                    </div>
+                    <div>Insight: 
+                        <input style="width: 150px" type="text" name="attr_insight" />
+                        <input type="checkbox" name="attr_insight_prof" />
+                    </div>
+                    <div>Medicine: 
+                        <input style="width: 150px" type="text" name="attr_medicine" />
+                        <input type="checkbox" name="attr_medicine_prof" />
+                    </div>
+                    <div>Perception: 
+                        <input style="width: 150px" type="text" name="attr_perception" />
+                        <input type="checkbox" name="attr_perception_prof" />
+                    </div>
+                    <div>Survival: 
+                        <input style="width: 150px" type="text" name="attr_survival" />
+                        <input type="checkbox" name="attr_survival_prof" />
+                    </div>
+                    <div>-----</div>
+                    <div>Deception: 
+                        <input style="width: 150px" type="text" name="attr_deception" />
+                        <input type="checkbox" name="attr_deception_prof" />
+                    </div>
+                    <div>Performance: 
+                        <input style="width: 150px" type="text" name="attr_performance" />
+                        <input type="checkbox" name="attr_performance_prof" />
+                    </div>
+                    <div>Persuation: 
+                        <input style="width: 150px" type="text" name="attr_persuation" />
+                        <input type="checkbox" name="attr_persuation_prof" />
+                    </div>
+                    <div>Intimidation: 
+                        <input style="width: 150px" type="text" name="attr_intimidation" />
+                        <input type="checkbox" name="attr_intimidation_prof" />
+                    </div>
+                    <div>-----</div>
+                    <div>Conditions</div>
+                    <div><textarea name="attr_conditions" class="trait-block-textarea"></textarea></div>
+                </div>
+            </div>
+            <div style="flex-grow: 1">
+                <div class="trait-block right" style="height: 50%">
+                    <div class="trait-block-corner-right"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Racial/Class Features</div>
+                    <div><textarea name="attr_racial_class_features" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="trait-block right" style="height: 50%">
+                    <div class="trait-block-corner-right"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Language/Proficiencies</div>
+                    <div><textarea name="attr_language_proficiencies" class="trait-block-textarea"></textarea></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/worker">
+        function getAbilityScoreModifier(score) {
+            if (score > 10) {
+                return parseInt((score - 10) / 2);
+            } else if (score < 10) {
+                return (parseInt((10 - score) / 2)) * -1;
+            } else {
+                return 0;
+            }
+        }
+
+        const attributes = [
+            ["athletics", "strength"],
+            ["acrobatics", "dexterity"],
+            ["piloting", "dexterity"],
+            ["sleight_of_hand", "dexterity"],
+            ["stealth", "dexterity"],
+            ["arcana", "intelligence"],
+            ["data", "intelligence"],
+            ["history", "intelligence"],
+            ["investigation", "intelligence"],
+            ["nature", "intelligence"],
+            ["religion", "intelligence"],
+            ["technology", "intelligence"],
+            ["animal_handling", "wisdom"],
+            ["insight", "wisdom"],
+            ["medicine", "wisdom"],
+            ["perception", "wisdom"],
+            ["survival", "wisdom"],
+            ["deception", "charisma"],
+            ["performance", "charisma"],
+            ["persuation", "charisma"],
+            ["intimidation", "charisma"]
+        ];
+
+        const stats = [
+            "strength",
+            "charisma",
+            "wisdom",
+            "intelligance",
+            "constitution",
+            "dexterity"
+        ];
+
+        stats.forEach(function(stat) {
+            on(`change:${stat}`, function() {
+                getAttrs([stat], function(values) {               
+                    setAttrs({ [`${stat}_mod`]: getAbilityScoreModifier(values[stat]) });
+                });
+                attributes.forEach(function(attribute) {
+                    getAttrs([attribute[1], "proficiency_bonus", `${attribute[0]}_prof`], function(values) {    
+                        setAttrs({ [`${attribute[0]}`]: values[`${attribute[0]}_prof`] === "on" ? 
+                            Number(values["proficiency_bonus"] || 0) + getAbilityScoreModifier(values[attribute[1]]) :
+                            getAbilityScoreModifier(values[attribute[1]])
+                        });
+                    });
+                })
+            });
+        });
+        // On checkbox prof check update the attribute
+        attributes.forEach(function(attribute) {
+            on(`change:${attribute[0]}_prof`, function(info) {
+                // current stat related to attribute, profficiency modifier
+                getAttrs([attribute[1], "proficiency_bonus"], function(values) {    
+                    setAttrs({ [`${attribute[0]}`]: info.newValue === "on" ? 
+                        Number(values["proficiency_bonus"] || 0) + getAbilityScoreModifier(values[attribute[1]]) :
+                        getAbilityScoreModifier(values[attribute[1]])
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
