@@ -59,7 +59,7 @@ input[type="checkbox"] {
 }
 .ac-shield {
     position: relative;
-    background-image: url("images/ac_shield.png");
+    background-image: url("https://raw.githubusercontent.com/TomWaterson/roll20darkmatter/develop/images/ac_shield.png");
     width: 167px;
     height: 182px;
 }
@@ -80,7 +80,7 @@ input[type="checkbox"] {
 }
 .hit-points {
     position: relative;
-    background-image: url(images/hit_points.png);
+    background-image: url("https://raw.githubusercontent.com/TomWaterson/roll20darkmatter/develop/images/hit_points.png");
     width: 238px;
     height: 210px;
 }
