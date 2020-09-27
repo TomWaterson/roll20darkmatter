@@ -52,187 +52,285 @@
                 </div>
                 <div class="left trait-block">
                     <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
-                    <div class="trait-block-label">Flaws</div>
-                    <div><textarea name="attr_flaws" class="trait-block-textarea"></textarea></div>
-                </div>
-                <div class="left trait-block">
-                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
                     <div class="trait-block-label">Allies/Enemies</div>
                     <div><textarea name="attr_allies_and_enemies" class="trait-block-textarea"></textarea></div>
                 </div>
-                <div class="left trait-block">
+                <div class="box-rounded">
+                    <div>Strength Saving Throws</div>
+                    <input type="text" name="attr_strength_saving_Throws" />
+                </div>
+                <div class="box-rounded">
+                    <div>Dexterity Saving Throws</div>
+                    <input type="text" name="attr_dexterity_saving_Throws" />
+                </div>
+                <div class="box-rounded">
+                    <div>Wisdom saving throws</div> 
+                    <input type="text" name="attr_wisdom_saving_throws" />
+                </div>
+                <div class="box-rounded">
+                    <div>Constitution saving throws</div> 
+                    <input type="text" name="attr_constitution_saving_throws" />
+                </div>
+                <div class="box-rounded">
+                    <div>Intelligence saving throws</div> 
+                    <input type="text" name="attr_intelligence_saving_throws" />
+                </div>
+            </div>
+            <div style="flex-grow: 2">
+                <div style="display: flex; margin:auto; margin: 16px 0px">
+                    <div style="border: 5px solid #ccc">Inspiration</div>
+                    <input style="width: 150px" type="text" name="attr_inspiration" />
+                </div>
+                <div style="margin-bottom: 32px; display: flex">
+                    <div class="ac-shield">
+                        <input class="ac" name="attr_ac" type="number" />
+                        <input class="alt" name="attr_ac_alt" type="number" />
+                    </div>
+                    <div style="flex-grow:1; font-size: 0.5rem; text-align: center">
+                        <div class="box-rounded">
+                            <div>Inititive</div>
+                            <div><input name="attr_inititive" type="text" /></div>
+                        </div>
+                        <div class="box-rounded">
+                            <div>Speed</div>
+                            <div><input name="attr_speed" type="text" /></div>
+                        </div>
+                        <div class="box-rounded">
+                            <div>Temp.HP</div>
+                            <div><input name="attr_temp_hp" type="text" /></div>
+                        </div>
+                        <div class="box-rounded">
+                            <div>Proficiency Bonus</div>
+                            <div><input type="text" name="attr_proficiency_bonus" /></div>
+                        </div>
+                        <div class="box-rounded">
+                            <div>Death Saves</div>
+                            <div style="display: flex;">
+                                <span>Successes</span>
+                                <input type="radio" name="attr_deaths_saves"/> 
+                                <input type="radio" name="attr_deaths_saves"/> 
+                                <input type="radio" name="attr_deaths_saves" />
+                            </div>
+                            <div style="display: flex;">
+                                <span>Failures</span>
+                                <input type="radio" name="attr_deaths_fails"/> 
+                                <input type="radio" name="attr_deaths_fails"/> 
+                                <input type="radio" name="attr_deaths_fails" />
+                            </div>
+                        </div>
+                        <div class="box-rounded">
+                            <div>Resistances</div>
+                            <div><textarea name="attr_resistances"></textarea></div>
+                        </div>
+                    </div>
+                    <div class="hit-points">
+                        <input class="hp" type="number" name="attr_hp" />
+                        <input class="max-hp" type="number" name="attr_max_hp" />
+                        <input class="hit-dice" type="number" name="attr_hit_dice" />
+                    </div>
+                </div>
+                <div>
+                    <!-- MAIN STATS CONTAINER: -->
+                    <div class="stats-main">
+                        <!-- STRENGTH MOD: -->
+                        <div class="strength">
+                            <div><input type="text" name="attr_strength" /></div> 
+                            <div><input value="0" type="text" name="attr_strength_mod" /></div> 
+                        </div>
+                        <!-- CHARISMA MOD: -->
+                        <div class="charisma">
+                            <div><input type="text" name="attr_charisma" /></div> 
+                            <div><input value="0" type="text" name="attr_charisma_mod" /></div>
+                        </div>
+                        <!-- WISDOM MOD: -->
+                        <div class="wisdom">
+                            <div><input value="0" type="text" name="attr_wisdom_mod" /></div>
+                            <div><input type="text" name="attr_wisdom" /></div>
+                        </div>
+                        <!-- INTELLIGENCE MOD: -->
+                        <div class="intelligence">
+                            <div><input value="0" type="text" name="attr_intelligence_mod" /></div>
+                            <div><input type="text" name="attr_intelligence" /></div>
+                        </div>
+                        <!-- CONSTITUTION MOD: -->
+                        <div class="constitution">
+                            <div><input value="0" type="text" name="attr_constitution_mod" /></div>
+                            <div><input type="text" name="attr_constitution" /></div>
+                        </div>
+                        <!-- DEXTERITY MOD: -->
+                        <div class="dexterity">
+                            <div><input type="text" name="attr_dexterity" /></div>
+                            <div><input value="0" type="text" name="attr_dexterity_mod" /></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Athletics:</span>
+                            <input style="width: unset;" type="text" name="attr_athletics" />
+                            <input type="checkbox" name="attr_athletics_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Acrobatics:</span>
+                            <input style="width: unset;" type="text" name="attr_acrobatics" />
+                            <input type="checkbox" name="attr_acrobatics_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Piloting: </span>
+                            <input style="width: unset;" type="text" name="attr_piloting" />
+                            <input type="checkbox" name="attr_piloting_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Sleight of hand: </span>
+                            <input style="width: unset;" type="text" name="attr_sleight_of_hand" />
+                            <input type="checkbox" name="attr_sleight_of_hand_prof" />
+                        </div>
+                    </div>              
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Stealth: </span>
+                            <input style="width: unset" type="text" name="attr_stealth" />
+                            <input type="checkbox" name="attr_stealth_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Arcana:</span>
+                            <input style="width: unset" type="text" name="attr_arcana" />
+                            <input type="checkbox" name="attr_arcana_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Data:</span>
+                            <input style="width: unset" type="text" name="attr_data" />
+                            <input type="checkbox" name="attr_data_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>History: </span>
+                            <input style="width: unset" type="text" name="attr_history" />
+                            <input type="checkbox" name="attr_history_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Investigation:</span>
+                            <input style="width: unset" type="text" name="attr_investigation" />
+                            <input type="checkbox" name="attr_investigation_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Nature:</span>
+                            <input style="width: unset" type="text" name="attr_nature" />
+                            <input type="checkbox" name="attr_nature_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Religion:</span>
+                            <input style="width: unset" type="text" name="attr_religion" />
+                            <input type="checkbox" name="attr_religion_prof" />
+                            
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Technology:</span>
+                            <input style="width: unset" type="text" name="attr_technology" />
+                            <input type="checkbox" name="attr_technology_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Animal Handling:</span>
+                            <input style="width: unset" type="text" name="attr_animal_handling" />
+                            <input type="checkbox" name="attr_animal_handling_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Insight:</span>
+                            <input style="width: unset" type="text" name="attr_insight" />
+                            <input type="checkbox" name="attr_insight_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Medicine:</span>
+                            <input style="width: unset" type="text" name="attr_medicine" />
+                            <input type="checkbox" name="attr_medicine_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Perception:</span>
+                            <input style="width: unset" type="text" name="attr_perception" />
+                            <input type="checkbox" name="attr_perception_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Survival:</span>
+                            <input style="width: unset" type="text" name="attr_survival" />
+                            <input type="checkbox" name="attr_survival_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Deception:</span>
+                            <input style="width: unset" type="text" name="attr_deception" />
+                            <input type="checkbox" name="attr_deception_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <span>Performance:</span>
+                            <input style="width: unset" type="text" name="attr_performance" />
+                            <input type="checkbox" name="attr_performance_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <span>Persuation:</span>
+                            <input style="width: unset" type="text" name="attr_persuation" />
+                            <input type="checkbox" name="attr_persuation_prof" />
+                        </div>
+                    </div>
+                    <div class="attribute-group">
+                        <div class="attribute-group-item">
+                            <div style="display: inline;">Intimidation:</div>
+                            <input style="width: unset" type="text" name="attr_intimidation" />
+                            <input type="checkbox" name="attr_intimidation_prof" />
+                        </div>
+                        <div class="attribute-group-item">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="box-rounded">
+                        <div>Conditions</div>
+                        <div><textarea name="attr_conditions" class="trait-block-textarea"></textarea></div>
+                    </div>
+                    
+                    <div class="box-rounded">
+                        <span>Passive Perception: = 10 + wisdom + profficiency bonus</span>
+                        <input type="text" name="attr_passive_perception" />
+                    </div>
+                </div>
+            </div>
+            <div style="flex-grow: 1">
+                <div class="trait-block left">
+                    <div class="trait-block-corner-left"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Racial/Class Features</div>
+                    <div><textarea name="attr_racial_class_features" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="trait-block left">
+                    <div class="trait-block-corner-left"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Language/Proficiencies</div>
+                    <div><textarea name="attr_language_proficiencies" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="trait-block left">
+                    <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
+                    <div class="trait-block-label">Flaws</div>
+                    <div><textarea name="attr_flaws" class="trait-block-textarea"></textarea></div>
+                </div>
+                <div class="trait-block left">
                     <div class="trait-block-corner-left"><div class="hexagon hexagon--background"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
                     <div class="trait-block-label">Inventory</div>
                     <div><textarea name="attr_inventory" class="trait-block-textarea"></textarea></div>
                 </div>
             </div>
-            <div style="flex-grow: 2">
-                <div style="display: flex">
-                    <input style="width: 150px" type="text" name="attr_inspiration" /><div style="border: 5px solid #ccc">Inspiration</div>
-                </div>
-                <div style="display: flex">
-                    <div>AC</div>
-                    <div><input name="attr_ac" type="text" /></div>
-                    <div>ALT AC</div>
-                    <div><input name="attr_ac_alt" type="text" /></div>
-                    <div style="font-size: 0.5rem; text-align: center">
-                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
-                            <div>Inititive</div>
-                            <div><input name="attr_inititive" type="text" /></div>
-                        </div>
-                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
-                            <div>Speed</div>
-                            <div><input name="attr_speed" type="text" /></div>
-                        </div>
-                        <div class="box-rounded" style="border: 2px solid #000; border-radius: 5px">
-                            <div>Temp.HP</div>
-                            <div><input name="attr_temp_hp" type="text" /></div>
-                        </div>
-                    </div>
-                    <div>HP (HEART) | MAX HP (BOX) | Hit Dice (BOX)</div>
-                </div>
-                <div style="display: flex">
-                    <div style="flex: 1 0 25%">
-                        <div>Resistances</div>
-                        <div><textarea name="attr_resistances"></textarea></div>
-                    </div>
-                    <div style="flex: 1 0 25%">
-                        <div>Deaths</div>
-                        <div><textarea name="attr_deaths"></textarea></div>
-                    </div>
-                    <div style="flex: 1 0 50%;">
-                        <div style="border: 5px solid #ccc">Proficiency Bonus</div>
-                        <input style="width: 150px" type="text" name="attr_proficiency_bonus" />
-                    </div>
-                </div>
-                <div>
-                    <div>Stats</div>
-                    <div>STRENGTH: <input style="width: 150px" type="text" name="attr_strength" /></div>
-                    <div>STRENGTH MOD: <input style="width: 150px" value="0" type="text" name="attr_strength_mod" /></div>
-                    <div>CHARISMA: <input style="width: 150px" type="text" name="attr_charisma" /></div>
-                    <div>CHARISMA MOD: <input style="width: 150px" value="0" type="text" name="attr_charisma_mod" /></div>
-                    <div>WISDOM: <input style="width: 150px" type="text" name="attr_wisdom" /></div>
-                    <div>WISDOM MOD: <input style="width: 150px" type="text" name="attr_wisdom_mod" /></div>
-                    <div>INTELLIGANCE: <input style="width: 150px" type="text" name="attr_intelligance" /></div>
-                    <div>INTELLIGANCE MOD: <input style="width: 150px" type="text" name="attr_intelligance_mod" /></div>
-                    <div>CONSTITUTION: <input style="width: 150px" type="text" name="attr_constitution" /></div>
-                    <div>CONSTITUTION MOD: <input style="width: 150px" type="text" name="attr_constitution_mod" /></div>
-                    <div>DEXTERITY: <input style="width: 150px" type="text" name="attr_dexterity" /></div>
-                    <div>DEXTERITY MOD: <input style="width: 150px" type="text" name="attr_dexterity_mod" /></div>
-                    <div>----Saving Throws----</div>
-                    <div>Dexterity Saving Throws: <input style="width: 150px" type="text" name="attr_dexterity_saving_Throws" /></div>
-                    <div>Wisdom saving throws: <input style="width: 150px" type="text" name="attr_wisdom_saving_throws" /></div>
-                    <div>Constitution saving throws: <input style="width: 150px" type="text" name="attr_constitution_saving_throws" /></div>
-                    <div>Intelligence saving throws: <input style="width: 150px" type="text" name="attr_intelligence_saving_throws" /></div>
-                    <div>-----</div>
-                    <div>Passive Perception: = 10 + wisdom + profficiency bonus
-                        <input style="width: 150px" type="text" name="attr_passive_perception" />
-                    </div>
-                    <div>-----</div>
-                    <div>Athletics: 
-                        <input style="width: 150px" type="text" name="attr_athletics" />
-                        <input type="checkbox" name="attr_athletics_prof" />
-                    </div>
-                    <div>Acrobatics: 
-                        <input style="width: 150px" type="text" name="attr_acrobatics" />
-                        <input type="checkbox" name="attr_acrobatics_prof" />
-                    </div>
-                    <div>Piloting: 
-                        <input style="width: 150px" type="text" name="attr_piloting" />
-                        <input type="checkbox" name="attr_piloting_prof" />
-                    </div>
-                    <div>Sleight of hand: 
-                        <input style="width: 150px" type="text" name="attr_sleight_of_hand" />
-                        <input type="checkbox" name="attr_sleight_of_hand_prof" />
-                    </div>
-                    <div>Stealth: 
-                        <input style="width: 150px" type="text" name="attr_stealth" />
-                        <input type="checkbox" name="attr_stealth_prof" />
-                    </div>
-                    <div>-----</div>
-                    <div>Arcana: 
-                        <input style="width: 150px" type="text" name="attr_arcana" />
-                        <input type="checkbox" name="attr_arcana_prof" />
-                    </div>
-                    <div>Data: 
-                        <input style="width: 150px" type="text" name="attr_data" />
-                        <input type="checkbox" name="attr_data_prof" />
-                    </div>
-                    <div>History: 
-                        <input style="width: 150px" type="text" name="attr_history" /></div>
-                    <div>Investigation: <input style="width: 150px" type="text" name="attr_investigation" />
-                        <input type="checkbox" name="attr_history_prof" />
-                    </div>
-                    <div>Nature: 
-                        <input style="width: 150px" type="text" name="attr_nature" />
-                        <input type="checkbox" name="attr_nature_prof" />
-                    </div>
-                    <div>Religion: 
-                        <input style="width: 150px" type="text" name="attr_religion" />
-                        <input type="checkbox" name="attr_religion_prof" />
-                    </div>
-                    <div>Technology: 
-                        <input style="width: 150px" type="text" name="attr_technology" />
-                        <input type="checkbox" name="attr_technology_prof" />
-                    </div>
-                    <div>-----</div>
-                    <div>Animal Handling: 
-                        <input style="width: 150px" type="text" name="attr_animal_handling" />
-                        <input type="checkbox" name="attr_animal_handling_prof" />
-                    </div>
-                    <div>Insight: 
-                        <input style="width: 150px" type="text" name="attr_insight" />
-                        <input type="checkbox" name="attr_insight_prof" />
-                    </div>
-                    <div>Medicine: 
-                        <input style="width: 150px" type="text" name="attr_medicine" />
-                        <input type="checkbox" name="attr_medicine_prof" />
-                    </div>
-                    <div>Perception: 
-                        <input style="width: 150px" type="text" name="attr_perception" />
-                        <input type="checkbox" name="attr_perception_prof" />
-                    </div>
-                    <div>Survival: 
-                        <input style="width: 150px" type="text" name="attr_survival" />
-                        <input type="checkbox" name="attr_survival_prof" />
-                    </div>
-                    <div>-----</div>
-                    <div>Deception: 
-                        <input style="width: 150px" type="text" name="attr_deception" />
-                        <input type="checkbox" name="attr_deception_prof" />
-                    </div>
-                    <div>Performance: 
-                        <input style="width: 150px" type="text" name="attr_performance" />
-                        <input type="checkbox" name="attr_performance_prof" />
-                    </div>
-                    <div>Persuation: 
-                        <input style="width: 150px" type="text" name="attr_persuation" />
-                        <input type="checkbox" name="attr_persuation_prof" />
-                    </div>
-                    <div>Intimidation: 
-                        <input style="width: 150px" type="text" name="attr_intimidation" />
-                        <input type="checkbox" name="attr_intimidation_prof" />
-                    </div>
-                    <div>-----</div>
-                    <div>Conditions</div>
-                    <div><textarea name="attr_conditions" class="trait-block-textarea"></textarea></div>
-                </div>
-            </div>
-            <div style="flex-grow: 1">
-                <div class="trait-block right" style="height: 50%">
-                    <div class="trait-block-corner-right"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
-                    <div class="trait-block-label">Racial/Class Features</div>
-                    <div><textarea name="attr_racial_class_features" class="trait-block-textarea"></textarea></div>
-                </div>
-                <div class="trait-block right" style="height: 50%">
-                    <div class="trait-block-corner-right"><div class="hexagon"><div class="hexTop"></div><div class="hexBottom"></div></div></div>
-                    <div class="trait-block-label">Language/Proficiencies</div>
-                    <div><textarea name="attr_language_proficiencies" class="trait-block-textarea"></textarea></div>
-                </div>
-            </div>
         </div>
     </div>
-    <script type="text/worker">
+    <script type="text/javascript">
         function getAbilityScoreModifier(score) {
             if (score > 10) {
                 return parseInt((score - 10) / 2);
@@ -271,7 +369,7 @@
             "strength",
             "charisma",
             "wisdom",
-            "intelligance",
+            "intelligence",
             "constitution",
             "dexterity"
         ];
