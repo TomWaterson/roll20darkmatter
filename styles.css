@@ -13,53 +13,106 @@ input {
 input[type="checkbox"] {
     width: auto;
 }
-.sheet-border {
+
+.border {
     border: 2px solid #000;
 }
 
-.sheet-top-row {
+.top-row {
     display: flex;
 }
-.sheet-container {
+.container {
     max-width: 1276px;
     background-color: #ccc;
     margin: auto;
     padding: 24px;
 }
-.sheet-player-name {
+.player-name {
+    flex: 1 0 50%;
+    border-right: none;
+}
+.character-name {
     flex: 1 0 50%;
 }
-.sheet-character-name {
-    flex: 1 0 50%;
-    margin-left: 8px;
-}
-.sheet-name-container {
+.name-container {
     display: flex;
     margin: 24px 8px;
 }
-.sheet-name-label {
+.name-label {
     flex-grow: 0;
     transform: rotate(-90deg);
 }
-.sheet-name-input {
+.name-input {
     flex-grow: 1;
 }
-.sheet-container-container {
+.container-container {
     display: flex;
 }
-.sheet-character-row {
+.character-row {
     display: flex;
 }
-.sheet-middle-row {
+.box-rounded {
+    border: 2px solid #000; 
+    border-radius: 5px;
+    margin: 8px;
+    font-size: 12px;
+}
+.ac-shield {
+    position: relative;
+    background-image: url("images/ac_shield.png");
+    width: 167px;
+    height: 182px;
+}
+.ac-shield .ac {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    width: 135px;
+}
+.ac-shield .alt {
+    position: absolute;
+    top: 125px;
+    left: 53px;
+    width: 60px;
+}
+.ac-shield input {
+    text-align: center;
+}
+.hit-points {
+    position: relative;
+    background-image: url(images/hit_points.png);
+    width: 238px;
+    height: 210px;
+}
+.hit-points .hp {
+    position: absolute;
+    top: 75px;
+    left: 45px;
+    width: 150px;
+}
+.hit-points .max-hp {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 100px;
+}
+.hit-points .hit-dice {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    width: 100px;
+}
+
+.middle-row {
     display: flex;
 }
 
-.sheet-trait-block {
+.trait-block {
     border: 2px solid #000;
     position: relative;
 }
 
-.sheet-left.sheet-trait-block::after {
+.left.trait-block::after {
     content: "";
     position: absolute;
     top: -2px;
@@ -71,7 +124,7 @@ input[type="checkbox"] {
     border-top: 15px solid #fff;
 }
 
-.sheet-right.sheet-trait-block::after {
+.right.trait-block::after {
     content: "";
     position: absolute;
     top: -2px;
@@ -83,33 +136,107 @@ input[type="checkbox"] {
     border-top: 15px solid #fff;
 }
 
-.sheet-trait-block-corner-left {
+.trait-block-corner-left {
     position: absolute;
     top: -2px;
     left: -2px;
 }
 
-.sheet-trait-block-corner-right {
+.trait-block-corner-right {
     position: absolute;
     top: -2px;
     right: -2px;
 }
 
-.sheet-trait-block-label {
+.trait-block-label {
     background-color: #000;
     color: #fff;
     padding: 16px 16px 16px 40px;
 }
 
-.sheet-trait-block-textarea {
+.trait-block-textarea {
     resize: vertical;
+    min-height: 100px;
     width: 100%;
     margin: 0px;
     padding: 0px;
     margin-bottom: -5px;
 }
 
-.sheet-hexagon {
+.stats-main {
+    margin: 0 auto 32px auto;
+    position: relative;
+    background-image: url("https://raw.githubusercontent.com/TomWaterson/roll20darkmatter/develop/images/main_stats.png");
+    width: 348px;
+    height: 400px;
+}
+
+.stats-main input {
+    text-align: center;
+}
+
+.stats-main .strength {
+    position: absolute;
+    width: 35px;
+    left: 155px;
+    top: 20px;
+}
+
+.stats-main .charisma {
+    position: absolute;
+    width: 35px;
+    left: 295px;
+    top: 100px;
+    transform: rotate(60deg);
+}
+
+.stats-main .wisdom {
+    position: absolute;
+    width: 35px;
+    left: 294px;
+    top: 258px;
+    transform: rotate(-60deg);
+}
+
+.stats-main .intelligence {
+    position: absolute;
+    width: 35px;
+    left: 155px;
+    top: 338px;
+}
+
+.stats-main .constitution {
+    position: absolute;
+    width: 35px;
+    left: 18px;
+    top: 258px;
+    transform: rotate(60deg);
+}
+
+.stats-main .dexterity {
+    position: absolute;
+    width: 35px;
+    left: 18px;
+    top: 100px;
+    transform: rotate(-60deg);
+}
+
+.attribute-group {
+    display: flex;
+}
+
+.attribute-group-item {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.attribute-group-item span {
+    margin-right: auto;
+}
+
+.hexagon {
     position: relative;
     width: 30px;
     height: 17.32px;
@@ -117,14 +244,14 @@ input[type="checkbox"] {
     border-left: solid 2px #ffffff;
     border-right: solid 2px #ffffff;
 }
-.sheet-hexagon--background {
+.hexagon--background {
     background-image: url(http://csshexagon.com/img/meow.jpg);
     background-size: auto 30.0222px;
     background-position: center;
 }
 
-.sheet-hexTop,
-.sheet-hexBottom {
+.hexTop,
+.hexBottom {
     position: absolute;
     z-index: 1;
     width: 21.21px;
@@ -138,8 +265,8 @@ input[type="checkbox"] {
 }
 
 /*counter transform the bg image on the caps*/
-.sheet-hexTop:after,
-.sheet-hexBottom:after {
+.hexTop:after,
+.hexBottom:after {
     content: "";
     position: absolute;
     width: 26.0000px;
@@ -153,27 +280,27 @@ input[type="checkbox"] {
     background: inherit;
 }
 
-.sheet-hexTop {
+.hexTop {
     top: -10.6066px;
     border-top: solid 2.8284px #ffffff;
     border-right: solid 2.8284px #ffffff;
 }
 
-.sheet-hexTop:after {
+.hexTop:after {
     background-position: center top;
 }
 
-.sheet-hexBottom {
+.hexBottom {
     bottom: -10.6066px;
     border-bottom: solid 2.8284px #ffffff;
     border-left: solid 2.8284px #ffffff;
 }
 
-.sheet-hexBottom:after {
+.hexBottom:after {
     background-position: center bottom;
 }
 
-.sheet-hexagon:after {
+.hexagon:after {
     content: "";
     position: absolute;
     top: 1.1547px;
